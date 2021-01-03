@@ -1,6 +1,6 @@
 # YTubers
 
-##Installations 
+## Installations 
 
 + Install Python (if linux then pre-installed - check version using : python3 --version)
 + Add virtual environment : pipenv 2020 : pip3 install pipenv
@@ -17,7 +17,7 @@
    + Follow line by line: https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/ 
 
 
-##Deploying Static files
+## Deploying Static files
 
 + COLLECTSTATIC
 + STATIC_ROOT
