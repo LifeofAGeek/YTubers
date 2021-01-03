@@ -10,11 +10,11 @@
 + pipenv install Django - Django framework
 + django-admin startproject tubers  
 + Test your installation using
-+ + cd tubers 
-+ + python3 manage.py runserver 
+   + cd tubers 
+   + python3 manage.py runserver 
 + Install Postgresql and Postgres Admin 4:
-+ + sudo apt-get install postgresql-12
-+ + Follow line by line: https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/ 
+   + sudo apt-get install postgresql-12
+   + Follow line by line: https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/ 
 
 
 ##Deploying Static files
