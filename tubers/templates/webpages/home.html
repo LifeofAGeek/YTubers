@@ -419,67 +419,23 @@
       <h3 class="text-center">Our Amazing Team</h3>
       <p class="pt-2 pb-3 text-center">Meet the team</p>
       <div class="team slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+        {% for t in teams%}
 
         <!-- team 1 -->
         <div class="card border-0 text-center  ml-3 mr-3">
-          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
+          <img src="{{ t.photo.url }}" class="card-img-top" alt="team-member">
           <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
+            <h5 class="card-title">{{ t.first_name }} {{ t.last_name }}</h5>
+            <p class="card-text">{{ t.role }}</p>
+            <a href="{{ t.youtube_link }}" class="btn btn-accent btn-block"> YouTube </a>
             <div class="text-center mt-2">
-              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
-              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
+              <button onclick="location.href = '{{ t.fb_link }}';" class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"> </i> </button>
+              <button onclick="location.href = '{{ t.insta_link }}';" class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"> </i> </button>
             </div>
           </div>
         </div>
 
-
-        <!-- team 1 -->
-        <div class="card border-0 text-center  ml-3 mr-3">
-          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
-            <div class="text-center mt-2">
-              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
-              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- team 1 -->
-        <div class="card border-0 text-center  ml-3 mr-3">
-          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
-            <div class="text-center mt-2">
-              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
-              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- team 1 -->
-        <div class="card border-0 text-center ml-3 mr-3">
-          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
-            <div class="text-center mt-2">
-              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
-              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
-            </div>
-          </div>
-        </div>
-
-
+        {% endfor %}
       </div>
 
       <div class="controls d-flex justify-content-center mt-2 mb-2">
