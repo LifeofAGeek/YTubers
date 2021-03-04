@@ -8,6 +8,7 @@ pillow = "*"
 django = "*"
 psycopg2 = "*"
 djangocms-admin-style = "*"
+django-ckeditor = "*"
 
 [dev-packages]
 
