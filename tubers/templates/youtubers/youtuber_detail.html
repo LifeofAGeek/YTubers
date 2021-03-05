@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <main class="single-page-tubers">
+    <div class="banner">
+      <img src="{% static './assets/images/bg-banner.png' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+        {{tubers.first_name}} {{tubers.last_name}}
+      </h1>
+    </div>
+
+
+
+    <section class="head container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <h1 class="text-center">{{tubers.first_name}} {{tubers.last_name}}</h1>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <h1 class="text-accent text-center">
+            $ {{tubers.price}}
+          </h1>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <img src="https://placeimg.com/640/480/people" class="img-fluid" alt="team-member">
+        </div>
+      </div>
+    </section>
+    <section class="video container text-center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VfGW0Qiy2I0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section class="descritpion container">
+      <h4> Description</h4>
+      <p class="mt-2 mb-2">{{ tubers.description | safe }}</p>
+
+    </section>
+
+    </br>
+
+    <section class="container w-50">
+
+      <div class="person-description mt-2">
+        <button class="btn btn-accent"> City : {{ tubers.city }} </button>
+        <button class="btn btn-accent"> Age : {{ tubers.age }} </button>
+        <button class="btn btn-accent"> Height : {{ tubers.hieght }} cm </button>
+      </div>
+      <div class="person-description mt-2">
+        <button class="btn btn-accent"> Solo : {{ tubers.crew }} </button>
+        <button class="btn btn-accent"> Canon : {{ tubers.camera_type }}</button>
+        <button class="btn btn-accent"> Subs : {{ tubers.subs_count }}</button>
+      </div>
+
+    </section>
+
+    <section class="youtuber-form container mt-5 mb-5">
+      <div class="row">
+        <form class="col-md-8 offset-md-2">
+          <h3 class="pt-2 pb-2">Fill the Form and reach out</h3>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <input type="email" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="password" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Interested In...">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="City">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="State">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Phone Number">
+            </div>
+
+          </div>
+
+          <div class="form-group pt-2">
+            <textarea class="form-control" rows="3" placeholder="Details Message"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-accent">Contact Us</button>
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+{% endblock content %}
