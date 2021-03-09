@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'youtubers.apps.YoutubersConfig',
     'webpages.apps.WebpagesConfig',
     'accounts.apps.AccountsConfig',
+    'hiretubers.apps.HiretubersConfig',
     'djangocms_admin_style',
     'django.contrib.admin',
     'django.contrib.auth',
